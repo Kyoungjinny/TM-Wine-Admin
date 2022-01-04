@@ -19,9 +19,9 @@ def order(request):
 
         # 수정필요
         conn = pymysql.connect(host='localhost',
-                               user='mina',
+                               user='root',
                                password='1234',
-                               db='adminDB')
+                               db='hotel_admin')
         curs = conn.cursor()
 
         sql = "insert into orderlist(와인이름,룸넘버,주문시간) values(%s ,%s, %s);"
@@ -40,9 +40,9 @@ def btn_click(request, order_num) :
 
     # 수정필요
     conn = pymysql.connect(host='localhost',
-                           user='mina',
+                           user='root',
                            password='1234',
-                           db='adminDB')
+                           db='hotel_admin')
     curs = conn.cursor()
 
     # 삭제 선택된 row의 와인이름 검색

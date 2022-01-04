@@ -2,8 +2,8 @@ from django.db import models
 
 class HotelWine(models.Model):
     보유와인번호 = models.AutoField(primary_key=True)
-    와인이름 = models.CharField(max_length=100)
     재고 = models.IntegerField(default=0)
+    와인이름 = models.CharField(max_length=100, default="")
 
     class Meta:
         db_table = 'HotelWine'
