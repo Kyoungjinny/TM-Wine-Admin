@@ -13,7 +13,7 @@ from django.http import HttpResponse, QueryDict
 #@api_view(['POST'])
 def order(request):
     if request.method == 'POST' :
-        data = json.loads(request.body)
+        data = request.data
         wineName = data.get('wineName', False)
         roomNum = data.get('roomNum', False)
 
